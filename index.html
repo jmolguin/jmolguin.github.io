@@ -42,10 +42,10 @@
             gesture-detector
         >
         <a-assets>
-          <a-asset-item
+          <img
             id="butterflies"
             src="assets/butterflies2.gif"
-          ></a-asset-item>
+          ></img>
         </a-assets>
         
 
@@ -59,7 +59,7 @@
             >
                 <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
                 <h1>una mas</h1>
-                <a-entity geometry="primitive:box;" material="shader:gif;src:url(#butterflies)"></a-entity>
+                <a-entity geometry="primitive:box;" material="shader:gif;src:#butterflies"></a-entity>
                 
             </a-nft>
 
