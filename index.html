@@ -34,7 +34,7 @@
                 var msgeEl = document.getElementById("mensaje");
                 var marker = this.el;
                 marker.addEventListener('markerFound', function () {
-                    msgeEl.innerHTML="<h1>Encontrado</h1>"
+                    msgeEl.innerHTML="<a-text value='Now Interactable' geometry='primitive:plane'></a-text>"
                 }.bind(this));
 
                 marker.addEventListener('markerLost', function() {   
