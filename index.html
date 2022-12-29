@@ -34,7 +34,7 @@
                 var msgeEl = document.getElementById("mensaje");
                 var marker = this.el;
                 marker.addEventListener('markerFound', function () {
-                    msgeEl.innerHTML="<h1>Encontrado</h1>"
+                    msgeEl.innerHTML="<h1 align='center'>Encontrado</h1>"
                 }.bind(this));
 
                 marker.addEventListener('markerLost', function() {   
@@ -95,7 +95,7 @@
                     gltf-model="#animated-asset-robot"
                     class="clickable"
                     gesture-handler
-                    position="-50 200 0"
+                    position="150 200 0"
                     rotation="0 0 -180"
                 ></a-entity>
                 
