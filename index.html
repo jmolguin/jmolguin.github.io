@@ -33,7 +33,7 @@
             const msgeEl = document.getElementById("mensaje");
             var marker = this.el;
             marker.addEventListener('markerFound', function () {
-                msgeEl.innerHTML="Encontrado"
+                msgeEl.innerHTML="<h1>Encontrado</h1>"
             }.bind(this));
 
             marker.addEventListener('markerLost', function() {   
