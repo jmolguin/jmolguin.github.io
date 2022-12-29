@@ -27,11 +27,29 @@
         color: white;
     }
 </style>
+<script>
+    AFRAME.registerComponent('manejaeventos', {
+        init: function () {
+            const msgeEl = document.getElementById("mensaje");
+            var marker = this.el;
+            marker.addEventListener('markerFound', function () {
+                msgeEl.innerHTML="Encontrado"
+            }.bind(this));
+
+            marker.addEventListener('markerLost', function() {   
+                msgeEl.innerHTML=""
+            }.bind(this));
+        }
+    });
+
+</script>
     </head>
 
     <body style="margin: 0px; overflow: hidden;">
         <div class="arjs-loader">
           <div>Cargando, por favor espere...</div>
+        </div>
+        <div id="mensaje">
         </div>
         <a-scene
             vr-mode-ui="enabled: false;"
@@ -54,12 +72,14 @@
         
 
             <a-nft
+              emitevents="true"
               type="nft"
               url="assets/escalera3"
               smooth="true"
               smoothCount="10"
               smoothTolerance=".01"
               smoothThreshold="5"
+              manejaeventos
             >
                 <a-entity 
                     geometry="primitive:plane"
