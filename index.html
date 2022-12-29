@@ -41,12 +41,16 @@
             embedded
             gesture-detector
         >
-          <a-assets>
-            <img
-              id="butterflies"
-              src="https://jmolguin.github.io/assets/butterflies1.gif"
-            ></img>
-          </a-assets>
+            <a-assets>
+              <img
+                id="butterflies"
+                src="https://jmolguin.github.io/assets/butterflies1.gif"
+              ></img>
+              <a-asset-item
+                    id="animated-asset-robot"
+                    src="assets/robot.gltf"
+              ></a-asset-item>
+            </a-assets>
         
 
             <a-nft
@@ -57,14 +61,21 @@
               smoothTolerance=".01"
               smoothThreshold="5"
             >
-                <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
-                <h1>Entity</h1>
-
                 <a-entity 
-                geometry="primitive:plane"
-                material="shader:gif;src:url(assets/butterflies1.gif)"
-                gif="">
-                </a-entity>
+                    geometry="primitive:plane"
+                    material="shader:gif;src:url(assets/butterflies1.gif)"
+                    gif=""
+                ></a-entity>
+                <a-entity
+                    id="bowser-model"
+                    scale="200 200 200"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset-robot"
+                    class="clickable"
+                    gesture-handler
+                    position="50 400 0"
+                    rotation="0 0 -180"
+                ></a-entity>
                 
             </a-nft>
 
