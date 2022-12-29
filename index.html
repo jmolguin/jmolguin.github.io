@@ -28,19 +28,21 @@
     }
 </style>
 <script>
-    AFRAME.registerComponent('manejaeventos', {
-        init: function () {
-            const msgeEl = document.getElementById("mensaje");
-            var marker = this.el;
-            marker.addEventListener('markerFound', function () {
-                msgeEl.innerHTML="<h1>Encontrado</h1>"
-            }.bind(this));
+    window.onload = function() {
+        AFRAME.registerComponent('manejaeventos', {
+            init: function () {
+                var msgeEl = document.getElementById("mensaje");
+                var marker = this.el;
+                marker.addEventListener('markerFound', function () {
+                    msgeEl.innerHTML="<h1>Encontrado</h1>"
+                }.bind(this));
 
-            marker.addEventListener('markerLost', function() {   
-                msgeEl.innerHTML=""
-            }.bind(this));
-        }
-    });
+                marker.addEventListener('markerLost', function() {   
+                    msgeEl.innerHTML=""
+                }.bind(this));
+            }
+        });
+    };
 
 </script>
     </head>
