@@ -35,7 +35,10 @@
                 var marker = this.el;
                 marker.addEventListener('markerFound', function () {
                     msgeEl.innerHTML=
-                    "<h1 align='center' style='color:red;background:white'>DETECTADO<br>X:100,Y:0,Z:-200</h1>"
+                    "<h1 align='center' style='color:red;background:white'>\
+                        DETECTADO\
+                        <br>X:80,Y:0,Z:-200\
+                    </h1>"
                 }.bind(this));
 
                 marker.addEventListener('markerLost', function() {   
@@ -96,8 +99,8 @@
                     gltf-model="#animated-asset-robot"
                     class="clickable"
                     gesture-handler
-                    position="100 0 -200"
-                    rotation="0 0 -180"
+                    position="80 0 -200"
+                    rotation="0 0 90"
                 ></a-entity>
                 
             </a-nft>
