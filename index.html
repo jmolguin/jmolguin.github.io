@@ -73,10 +73,6 @@
                     id="animated-asset-robot"
                     src="assets/robot.gltf"
               ></a-asset-item>
-              <a-asset-item
-                    id="animated-asset-sheep"
-                    src="assets/sheep.glb"
-                ></a-asset-item>
             </a-assets>
         
 
@@ -90,17 +86,12 @@
               smoothThreshold="5"
               manejaeventos
             >
-               
-                <a-entity
-                    id="bowser-model"
-                    scale="50 50 50"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#animated-asset-sheep"
-                    class="clickable"
-                    gesture-handler
-                    position="60 0 -200"
-                    rotation="0 -90 90"
+                <a-entity 
+                    geometry="primitive:cube"
+                    material="shader:gif;src:url(assets/butterflies1.gif)"
+
                 ></a-entity>
+               
                 
             </a-nft>
 
